@@ -7,6 +7,7 @@ public class practiceQ2 {
         for(int num:ropes){
             pq.add(num);
         }
+        System.out.println(pq.size());
         int res=0;
         while(pq.size()>1){
             int first=pq.poll();
