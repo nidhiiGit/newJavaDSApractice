@@ -4,8 +4,8 @@ import java.util.Comparator;
 public class IndianCoins {
     public static int minCoins(Integer coins[], int val){
         int ans=0;
-        for(int i=1; i<coins.length; i++){
-            if(val>0 && coins[i] <= val){
+        for(int i=0; i<coins.length; i++){
+            if(coins[i] <= val){
                 while(coins[i] <= val){
                     val-=coins[i];
                     ans++;
