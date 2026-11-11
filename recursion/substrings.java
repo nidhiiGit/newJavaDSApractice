@@ -1,13 +1,17 @@
 public class substrings {
-    public static void consecutiveSubstrings(String str){
-        if(i==str.length()){
-            System.out.println();
-            return;
+    public static int consecutiveSubstrings(String str, int idx){
+        if(idx==str.length()){
+            return 0;
         }
-
-        if (str.charAt(i)==)
+        int count=0;
+        for(int i=0; i<=idx; i++){
+            if(str.charAt(i) == str.charAt(idx)){
+                count++;
+            }
+        }
+        return count+consecutiveSubstrings(str,idx+1);
     }
     public static void main(String[] args) {
-        consecutiveSubstrings("abcab");
+        System.out.println(consecutiveSubstrings("abcab",0));
     }
 }
